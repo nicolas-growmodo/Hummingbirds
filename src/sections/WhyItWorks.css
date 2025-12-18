@@ -1,0 +1,63 @@
+.why-it-works {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.why-content {
+    display: flex;
+    flex-direction: column-reverse;
+    /* Stack image on top on mobile if desired, or keep normally */
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 960px) {
+    .why-content {
+        flex-direction: row;
+    }
+}
+
+.why-text {
+    flex: 1;
+}
+
+.why-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.why-lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-secondary);
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.why-list li {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.why-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.why-image {
+    flex: 1;
+    width: 100%;
+}
+
+.image-placeholder {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}

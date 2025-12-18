@@ -1,0 +1,116 @@
+.pricing-card {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-default);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card--lime {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.pricing-card--white {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-card);
+}
+
+.pricing-card--recommended {
+    transform: scale(1.05);
+    /* Slightly larger */
+    border: 2px solid var(--color-primary-hover);
+    z-index: 10;
+}
+
+.pricing-card__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pricing-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card__price-container {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card__currency {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.pricing-card__price {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.pricing-card__period {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    margin-left: 0.25rem;
+}
+
+.pricing-card__button {
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.pricing-card__features-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.pricing-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-card__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.pricing-card__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.pricing-card--lime .pricing-card__check {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+}

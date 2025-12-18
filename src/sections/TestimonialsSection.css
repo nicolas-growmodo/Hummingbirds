@@ -1,0 +1,23 @@
+.testimonials-section {
+    padding: 6rem 0;
+    background-color: var(--color-primary);
+    /* Lime green background */
+}
+
+.testimonials-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+    opacity: 0.3;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
