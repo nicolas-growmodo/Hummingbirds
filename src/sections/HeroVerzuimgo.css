@@ -1,6 +1,6 @@
 .hero-v {
-    background: linear-gradient(180deg, #FFFFFF 0%, var(--color-primary) 100%);
-    padding: 8rem 0 4rem;
+    background: linear-gradient(0deg, var(--color-primary) 0%, #FFFFFF 100%);
+    padding: 10rem 0 6rem;
     text-align: center;
     min-height: 80vh;
     display: flex;
@@ -8,7 +8,7 @@
 }
 
 .hero-v__content {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -24,16 +24,19 @@
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    max-width: 700px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 700;
 }
 
 .hero-v__description {
     font-size: 1rem;
     color: var(--color-text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-top: 18px;
+    opacity: 0.44;
+    font-weight: 700;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -43,4 +46,23 @@
     gap: 1rem;
     justify-content: center;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+}
+
+@media (max-width: 768px) {
+    .hero-v {
+        padding: 8rem 0 4rem;
+        min-height: auto;
+    }
+
+    .hero-v__title {
+        font-size: 2.25rem;
+        /* Larger on mobile as per design */
+    }
+
+    .hero-v__subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }

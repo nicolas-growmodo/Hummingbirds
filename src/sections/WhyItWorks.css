@@ -3,61 +3,107 @@
     background-color: white;
 }
 
-.why-content {
+.why-block {
     display: flex;
-    flex-direction: column-reverse;
-    /* Stack image on top on mobile if desired, or keep normally */
+    flex-direction: column;
     gap: 4rem;
     align-items: center;
+    margin-bottom: 8rem;
 }
 
-@media (min-width: 960px) {
-    .why-content {
+.why-block:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    .why-block {
         flex-direction: row;
+        gap: 6rem;
+    }
+
+    /* Ensure even spacing: content takes roughly half */
+    .why-content,
+    .why-image-wrapper {
+        flex: 1;
+        width: 100%;
+        /* Ensure they take full width of flex basis */
     }
 }
 
-.why-text {
-    flex: 1;
-}
 
-.why-text h2 {
+/* Content Styling */
+.why-content h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
 }
 
-.why-lead {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+.why-subtitle {
+    font-size: 1.125rem;
+    font-weight: 700;
     color: var(--color-text-secondary);
+    margin-bottom: 2rem;
 }
 
+/* Custom Lists */
 .why-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .why-list li {
-    margin-bottom: 1rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    line-height: 1.5;
 }
 
+.why-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* Actions */
 .why-actions {
     display: flex;
     gap: 1rem;
 }
 
-.why-image {
-    flex: 1;
-    width: 100%;
+.btn-lime {
+    background-color: #DAF67D !important;
+    /* Lime */
+    color: var(--color-secondary) !important;
+    border: none !important;
+    border-radius: 999px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 700 !important;
 }
 
-.image-placeholder {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
+.btn-arrow {
+    border-radius: 999px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+}
+
+/* Images */
+.why-image-wrapper {
+    position: relative;
+    height: 400px;
+    /* Fixed height for consistency */
+}
+
+.why-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    /* Large rounded corners */
 }

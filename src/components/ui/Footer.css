@@ -1,52 +1,122 @@
 .footer {
-    background-color: var(--color-gray-900);
-    color: white;
-    padding: 4rem 0 2rem;
+    background-color: white;
+    color: var(--color-secondary);
+    padding: 0 0 4rem;
+    overflow: hidden;
 }
 
-.footer__grid {
+.footer-title {
+    font-size: 16vw;
+    /* Massive responsive text */
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    margin-left: -5vw;
+    /* Slight offset to bleed edge like in design if desired, or keep centered */
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+}
+
+.footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Left Column */
+.footer-left h2 {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.footer-text p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    font-weight: 600;
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.footer-btn {
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Right Column */
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.footer-email,
+.footer-phone {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.star-icon {
+    color: #DAF67D;
+    /* Lime star */
+    font-size: 1.5rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.footer-reviews {
     margin-bottom: 4rem;
 }
 
-.footer__logo {
-    font-size: 1.5rem;
+.stars {
+    color: #DAF67D;
+    /* Lime stars */
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.review-text {
+    font-size: 0.75rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
+    text-transform: uppercase;
 }
 
-.footer__desc {
-    color: var(--color-gray-400);
-    max-width: 300px;
-}
-
-.footer__links {
+.footer-legal {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    gap: 4rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.6;
 }
 
-.footer__links h4 {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1.125rem;
-}
-
-.footer__links a {
-    color: var(--color-gray-400);
-}
-
-.footer__links a:hover {
-    color: var(--color-primary);
-}
-
-.footer__bottom {
-    border-top: 1px solid var(--color-gray-800);
-    padding-top: 2rem;
-    text-align: center;
-    color: var(--color-gray-500);
-    font-size: 0.875rem;
+.legal-col a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    display: block;
 }

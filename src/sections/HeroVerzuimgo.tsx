@@ -8,20 +8,20 @@ export const HeroVerzuimgo: React.FC = () => {
             <Container>
                 <div className="hero-v__content">
                     <h1 className="hero-v__title">
-                        Meer aanvragen of meer<br />
-                        sollicitanten voor bouwbedrijven.
+                        Meer aanvragen of meer sollicitanten voor bouwbedrijven.
                     </h1>
                     <p className="hero-v__subtitle">
-                        Pak onnodige kosten en zorgen over verzuim aan.<br />
-                        Ontdek hoe wij je helpen met effectieve preventie en re-integratie.
-                    </p>
-                    <p className="hero-v__description">
-                        Kies hieronder wat je wilt verbeteren en start gelukkig vandaag nog.
+                        Vaste maandelijkse abonnementen met concrete output.
+                        Wij doen het werk, jij ziet resultaat.
+                        Start binnen 7 dagen. Maandelijks opzegbaar.
                     </p>
                     <div className="hero-v__actions">
-                        <Button variant="primary" size="large">Start nu direct</Button>
-                        <Button variant="outline" size="large">Meer informatie</Button>
+                        <Button variant="primary" size="large">Start een abonnement</Button>
+                        <Button variant="outline" size="large">Vraag de gratis scan</Button>
                     </div>
+                    <p className="hero-v__description">
+                        Powered by Hummingbirds – voor maatwerk en grotere trajecten: hummingbirds.be
+                    </p>
                 </div>
             </Container>
         </section>

@@ -1,29 +1,91 @@
 .service-selection {
-    padding: 4rem 0;
-    margin-top: -3rem;
-    /* Overlap with hero */
+    background: linear-gradient(180deg, var(--color-primary) 0%, #FFFFFF 100%);
+    padding: 3rem 0;
+    margin-top: 0;
+    /* Remove negative margin to avoid overlap issues with gradient */
 }
 
 .section-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    line-height: 1.1;
-    color: var(--color-gray-900);
+    position: relative;
+    text-align: left;
+    margin-bottom: 5rem;
+    padding-top: 2rem;
+}
+
+/* Desktop Styles (Default) */
+.title-main {
+    display: block;
+    font-size: 5rem;
     font-weight: 800;
-    margin-bottom: 3rem;
-    opacity: 0.2;
-    /* Subliminal text effect from design */
+    line-height: 1.1;
+    color: var(--color-secondary);
+    z-index: 2;
+}
+
+.title-main br {
+    display: block;
+}
+
+.title-watermark {
+    display: block;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.2);
+    /* Faded but visible */
+    line-height: 1.1;
+    margin-left: 0;
+    z-index: 1;
+    margin-top: 0;
+    /* Adjust spacing if needed */
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        margin-bottom: 3rem;
+        padding-top: 0;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .title-main {
+        display: block;
+        font-size: 3rem;
+        /* Reduced from 3.25rem */
+        line-height: 1.1;
+        position: relative;
+    }
+
+    .title-main br {
+        display: none;
+        /* Let it wrap naturally or fit on one line */
+    }
+
+    .title-watermark {
+        display: block;
+        font-size: 3rem;
+        /* Reduced relative to main */
+        margin-top: 0;
+        /* Remove overlap overlap "error" */
+        margin-left: 0;
+        color: rgba(0, 0, 0, 0.15);
+        line-height: 1;
+        position: relative;
+    }
+
+    .service-selection__header {
+        overflow: hidden;
+    }
 }
 
 .service-selection__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1000px;
     margin: 0 auto;
 }
 
 .service-card {
-    background: white;
+    background: #FFFFFF;
     border-radius: var(--radius-lg);
     padding: 3rem 2rem;
     text-align: center;
@@ -31,11 +93,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    background-color: rgba(224, 224, 224, 0.3);
 }
 
 .service-card__icon {

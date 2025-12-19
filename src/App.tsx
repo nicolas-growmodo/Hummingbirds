@@ -19,6 +19,7 @@ const App: React.FC = () => {
       <HeroVerzuimgo />
       <ServiceSelection />
       <PricingComparison />
+
       <ExtraServices />
       <WhyItWorks />
       <TestimonialsSection />

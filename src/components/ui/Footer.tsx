@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../common';
+import { Container, Button } from '../common';
 
 import './Footer.css';
 
@@ -7,35 +7,52 @@ export const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <Container>
-                <div className="footer__grid">
-                    <div>
-                        <div className="footer__logo">Verzuimgo</div>
-                        <p className="footer__desc">De slimme oplossing voor verzuimbeheer.</p>
+                {/* Massive Title */}
+                <h1 className="footer-title">contact</h1>
+
+                <div className="footer-content">
+                    {/* Left Column */}
+                    <div className="footer-left">
+                        <h2>Let's grow<br />together</h2>
+                        <div className="footer-text">
+                            <p>Heb je de ambitie om te groeien met je onderneming en zoek je daarvoor een gedreven marketingpartner, dan zit je helemaal goed bij Hummingbirds. Van strategie en branding tot het uitrollen van je digitale marketing, wij staan voor je klaar. Contacteer ons gerust bij verdere vragen of voor een kennismakingsgesprek.</p>
+                        </div>
+                        <Button variant="black" className="footer-btn">CONTACT &rarr;</Button>
                     </div>
 
-                    <div className="footer__links">
-                        <h4>Diensten</h4>
-                        <a href="#">Preventie</a>
-                        <a href="#">Re-integratie</a>
-                        <a href="#">Advies</a>
-                    </div>
+                    {/* Right Column */}
+                    <div className="footer-right">
+                        <div className="footer-contact-info">
+                            <a href="mailto:info@hummingbirds.be" className="footer-email">
+                                <span className="star-icon">★</span> info@hummingbirds.be
+                            </a>
+                            <a href="tel:+3256310041" className="footer-phone">+32 56 31 00 41</a>
+                        </div>
 
-                    <div className="footer__links">
-                        <h4>Bedrijf</h4>
-                        <a href="#">Over ons</a>
-                        <a href="#">Contact</a>
-                        <a href="#">Vacatures</a>
-                    </div>
+                        <div className="footer-socials">
+                            <span>f</span> <span>📷</span> <span>in</span> <span>P</span> <span>WA</span>
+                        </div>
 
-                    <div className="footer__links">
-                        <h4>Legaal</h4>
-                        <a href="#">Privacy</a>
-                        <a href="#">Voorwaarden</a>
-                        <a href="#">Cookies</a>
+                        <div className="footer-reviews">
+                            <div className="stars">★★★★★</div>
+                            <span className="review-text">32 Google recensies</span>
+                        </div>
+
+                        <div className="footer-legal">
+                            <div className="legal-col">
+                                <strong>HUMMINGBIRDS BV</strong><br />
+                                MORINNESTRAAT 7<br />
+                                8500<br />
+                                KORTRIJK<br />
+                                BE 0684 696 967
+                            </div>
+                            <div className="legal-col">
+                                <a href="#">PRIVACY & COOKIES</a><br />
+                                <a href="#">ONZE REGIO'S</a><br />
+                                <a href="#">ALGEMENE VOORWAARDEN</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="footer__bottom">
-                    &copy; {new Date().getFullYear()} Verzuimgo. Alle rechten voorbehouden.
                 </div>
             </Container>
         </footer>

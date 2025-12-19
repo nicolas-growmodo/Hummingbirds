@@ -3,7 +3,7 @@ import './Button.css';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'black';
   size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
   disabled?: boolean;

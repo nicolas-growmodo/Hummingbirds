@@ -2,6 +2,7 @@ import React from 'react';
 import './TestimonialCard.css';
 
 interface TestimonialCardProps {
+    title: string;
     quote: string;
     author: string;
     role: string;
@@ -9,6 +10,7 @@ interface TestimonialCardProps {
 }
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({
+    title,
     quote,
     author,
     role,
@@ -21,12 +23,13 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
                     <span key={i} className="testimonial-card__star">★</span>
                 ))}
             </div>
+            <h4 className="testimonial-card__title">{title}</h4>
             <blockquote className="testimonial-card__quote">
-                "{quote}"
+                {quote}
             </blockquote>
             <div className="testimonial-card__author">
                 <div className="testimonial-card__avatar">
-                    {author.charAt(0)}
+                    {author.split(' ').map(n => n[0]).join('').slice(0, 1)}
                 </div>
                 <div className="testimonial-card__info">
                     <div className="testimonial-card__name">{author}</div>

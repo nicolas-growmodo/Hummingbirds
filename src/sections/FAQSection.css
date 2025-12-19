@@ -1,19 +1,104 @@
 .faq-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
     background-color: white;
 }
 
 .faq-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    position: relative;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    padding-top: 2rem;
 }
 
-.text-gray {
-    color: var(--color-gray-300);
+/* Desktop Styles (Default) */
+.faq-title .title-main {
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-secondary);
+    z-index: 2;
+}
+
+.faq-title .title-watermark {
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.2);
+    /* Faded but visible */
+    line-height: 1.1;
+    margin-left: 1rem;
+    z-index: 1;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .faq-title {
+        text-align: left;
+        padding-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .faq-title .title-main {
+        display: block;
+        font-size: 3rem;
+        position: relative;
+    }
+
+    .faq-title .title-watermark {
+        display: block;
+        font-size: 3rem;
+        margin-top: 0;
+        /* Remove overlap */
+        margin-left: 0;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.15);
+        position: relative;
+    }
+
+    .faq-header {
+        overflow: hidden;
+    }
 }
 
 .faq-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto 5rem;
+}
+
+/* CTA Section */
+.faq-cta {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.faq-cta h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+.faq-cta p {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+.btn-contact {
+    background-color: #DAF67D;
+    /* Lime */
+    color: var(--color-secondary);
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn-contact:hover {
+    transform: translateY(-2px);
 }

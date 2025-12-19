@@ -10,7 +10,7 @@ interface ContainerProps {
 export const Container: React.FC<ContainerProps> = ({
     children,
     className = '',
-    maxWidth = 'lg',
+    maxWidth = 'xl',
 }) => {
     return (
         <div className={`container container--${maxWidth} ${className}`}>

@@ -1,18 +1,41 @@
 .final-cta {
-    background-color: var(--color-primary);
-    padding: 6rem 0;
+    background-color: #DAF67D;
+    /* Lime */
+    padding: 8rem 0;
     text-align: center;
 }
 
 .final-cta__content h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 1.5rem;
+    color: var(--color-secondary);
 }
 
 .final-cta__content p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.final-cta__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Custom button style override for the outline button on lime bg */
+.btn-scan {
+    border-color: var(--color-secondary) !important;
+    color: var(--color-secondary) !important;
+}
+
+.btn-scan:hover {
+    background-color: var(--color-secondary) !important;
+    color: white !important;
 }
