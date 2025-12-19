@@ -1,6 +1,6 @@
 .hero-v {
     background: linear-gradient(0deg, var(--color-primary) 0%, #FFFFFF 100%);
-    padding: 10rem 0 6rem;
+    padding: 12rem 0 8rem;
     text-align: center;
     min-height: 80vh;
     display: flex;
@@ -64,5 +64,15 @@
     .hero-v__subtitle {
         font-size: 1rem;
         padding: 0 1rem;
+    }
+
+    .hero-v__actions {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hero-v__actions .btn {
+        width: 100%;
     }
 }

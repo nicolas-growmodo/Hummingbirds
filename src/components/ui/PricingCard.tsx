@@ -41,7 +41,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
                 <h3 className="pricing-card__title">{title}</h3>
                 <div className="pricing-card__price-container">
                     <span className="pricing-card__currency">€</span>
-                    <span className="pricing-card__price">{price}</span>
+                    <span className="pricing-card__price">€{price}</span>
                     <span className="pricing-card__period"><br />{period}</span>
                 </div>
             </div>

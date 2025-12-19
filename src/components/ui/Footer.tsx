@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
 
                         <div className="footer-legal">
                             <div className="legal-col">
-                                <strong>HUMMINGBIRDS BV</strong><br />
+                                HUMMINGBIRDS BV<br />
                                 MORINNESTRAAT 7<br />
                                 8500<br />
                                 KORTRIJK<br />

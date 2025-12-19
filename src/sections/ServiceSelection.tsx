@@ -27,7 +27,7 @@ export const ServiceSelection: React.FC = () => {
                         </p>
                         <div className="service-card__actions">
                             <Button variant="primary" size="small">Selecteer</Button>
-                            <Button variant="outline" size="small">Meer</Button>
+                            <Button variant="outline" size="small">Meer &gt;</Button>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@ export const ServiceSelection: React.FC = () => {
                         </p>
                         <div className="service-card__actions">
                             <Button variant="primary" size="small">Selecteer</Button>
-                            <Button variant="outline" size="small">Meer</Button>
+                            <Button variant="outline" size="small">Meer &gt;</Button>
                         </div>
                     </div>
                 </div>
