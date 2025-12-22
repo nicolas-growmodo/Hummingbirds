@@ -1,0 +1,145 @@
+.extra-services {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #FFFFFF;
+    /* Ensure white bg behind section if needed, though layout implies transparent/white */
+}
+
+.extra-services__header {
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.extra-services__header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.extra-services__header p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.extra-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Force 3 columns */
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 992px) {
+    .extra-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.extra-card {
+    background: #F9F9F9DF;
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align text left/start inside card as per image */
+    text-align: left;
+    transition: transform var(--transition-default);
+}
+
+.extra-card--popular {
+    border: 1px solid var(--color-secondary);
+    background: #FFFFFF;
+    /* Popular card might be cleaner white or same gray? Image looks same gray/white */
+    /* If image shows border around popular, add here. Image shows border! */
+}
+
+/* Credits Pill */
+.extra-card__credits-pill {
+    background-color: #DAF67D;
+    /* Lime/green */
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Coin icon placeholder styling */
+.extra-card__credits-icon {
+    /* Simple CSS shape for coin stack or replace with SVG */
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    /* This is just a placeholder dot, user can replace with icon */
+    text-indent: -9999px;
+}
+
+/* Badge "Meest populair" */
+.extra-card__badge-pop {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.extra-card__price {
+    font-size: 2.5rem;
+    /* ~40px */
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+    letter-spacing: -0.02em;
+}
+
+.extra-card__desc {
+    font-size: 0.875rem;
+    font-weight: 700;
+    /* Bold description */
+    margin-bottom: 2rem;
+    color: var(--color-secondary);
+}
+
+.extra-card__btn {
+    width: 100%;
+    margin-top: auto;
+    /* Push button to bottom if height varies */
+    border-radius: 999px;
+}
+
+/* Disclaimer Section */
+.extra-disclaimer {
+    margin-top: 4rem;
+}
+
+.extra-disclaimer h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.extra-disclaimer p {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
